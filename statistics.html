@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="shortcut icon" href="assets/img/icon.ico">
+    <script src="search.js"></script>
+    <title>
+      Stop
+    </title>
+  </head>
+  <body>
+    <header class="navbar navbar-inverse navbar-toggleable-md bg-faded sticky-top noselect" id="nav-bg">
+      <nav class="container">
+        <div class="d-flex justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" width="30" height="30" alt="">
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-between" id="mainNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="dictionary.html">Dictionary</a>
+            <a class="nav-item nav-link" href="quiz.html">Choices Quiz</a>
+            <div class="nav-item dropdown" id="dropdownID">
+              <a class="nav-link dropdown-toggle active"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Information
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item active" href="statistics.html">Statistics</a>
+                <a class="dropdown-item" href="myth.html">Myth vs Reality</a>
+                <a class="dropdown-item" href="vulnerabilities.html">Vulnerabilities</a>
+              </div>
+            </div>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
+          </div>
+          <form class="form-inline" id="search" method="post">
+            <input class="form-control mr-sm-2" type="text" onkeyup="search(this.value)" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="resultTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultTitle">Results</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="searchDisplay">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "container bg-danger rounded-bottom pb-2">
+			<span id = "statisticsid" class="display-4 text-info">Global Statistics</span>
+			<div class = 'imgDiv'>
+				<img id = "mappic" src = "assets/img/globe.png" usemap = "#hackmap"/>
+			</div>
+			<map name = "hackmap">
+				<area id = "northamericaid" shape = "poly" coords = "165, 44, 358, 42, 360, 109, 227, 202, 175, 152, 191, 80, 132, 73" onclick = "myFunction(1)"/>
+				<area id = "southamericaid" shape = "poly" coords = "290, 214, 392, 266, 337, 414, 304, 415, 271, 232" onclick = "myFunction(2)"/>
+				<area id = "europeid" shape = "poly" coords = "458, 80, 521, 44, 606, 39, 608, 125, 468, 140, 450, 138" onclick = "myFunction(3)"/>
+				<area id = "africaid" shape = "poly" coords = "456, 141, 562, 155, 608, 238, 563, 354, 515, 353, 498, 241, 439, 239, 440, 145" onclick = "myFunction(4)"/>
+				<area id = "asiaid" shape = "poly" coords = "616, 33, 814, 55, 794, 285, 598, 211, 546, 135, 620, 140" onclick = "myFunction(5)"/>
+				<area id = "australiaid" shape = "poly" coords = "774, 314, 833, 286, 918, 361, 875, 392, 767, 355" onclick = "myFunction(6)"/>
+			</map>
+			<div id = "namerica"><h1 class = 'display-5'>North America</h1>
+				<h2 class = 'subOne'>Percentage of Children and Adults involved in trafficking</h2>
+				<h3 class = 'subTwo'>Children - 31%</br>Adults - 69%</h3>
+				<h2 class = 'subOne'>Percentage of Forms of Exploitations</h2>
+				<h3 class = 'subTwo'>Sexual Exploitation - 48%</br>Forced Labour - 47%</br>Other - 4%</h3>
+				<h2 class = 'subOne'>Percentage of Gender Breakdown</h2>
+				<h3 class = 'subTwo'>Male - 68%</br>Female - 32%</h3>
+			</div>
+			<div id = "samerica"><h1 class = 'display-5'>South America</h1>
+				<h2 class = 'subOne'>Percentage of Children and Adults involved in trafficking</h2>
+				<h3 class = 'subTwo'>Children - 31%</br>Adults - 69%</h3>
+				<h2 class = 'subOne'>Percentage of Forms of Exploitations</h2>
+				<h3 class = 'subTwo'>Sexual Exploitation - 48%</br>Forced Labour - 47%</br>Other - 4%</h3>
+				<h2 class = 'subOne'>Percentage of Gender Breakdown</h2>
+				<h3 class = 'subTwo'>Male - 68%</br>Female - 32%</h3>
+			</div>
+			<div id = "europe"><h1 class = 'display-5'>Europe</h1>
+				<h2 class = 'subOne'>Percentage of Children and Adults involved in trafficking</h2>
+				<h3 class = 'subTwo'>Children - 18%</br>Adults - 82%</h3>
+				<h2 class = 'subOne'>Percentage of Forms of Exploitations</h2>
+				<h3 class = 'subTwo'>Sexual Exploitation - 66%</br>Forced Labour - 26%</br>Other - 8%</h3>
+				<h2 class = 'subOne'>Percentage of Gender Breakdown</h2>
+				<h3 class = 'subTwo'>Male - 69%</br>Female - 31%</h3>
+			</div>
+			<div id = "africa"><h1 class = 'display-5'>Africa</h1>
+				<h2 class = 'subOne'>Percentage of Children and Adults involved in trafficking</h2>
+				<h3 class = 'subTwo'>Children - 62%</br>Adults - 38%</h3>
+				<h2 class = 'subOne'>Percentage of Forms of Exploitations</h2>
+				<h3 class = 'subTwo'>Sexual Exploitation - 53%</br>Forced Labour - 37%</br>Other - 10%</h3>
+				<h2 class = 'subOne'>Percentage of Gender Breakdown</h2>
+				<h3 class = 'subTwo'>Male - 45%</br>Female - 55%</h3>
+			</div>
+			<div id = "asia"><h1 class = 'display-5'>Asia</h1>
+				<h2 class = 'subOne'>Percentage of Children and Adults involved in trafficking</h2>
+				<h3 class = 'subTwo'>Children - 36%</br>Adults - 64%</h3>
+				<h2 class = 'subOne'>Percentage of Forms of Exploitations</h2>
+				<h3 class = 'subTwo'>Sexual Exploitation - 26%</br>Forced Labour - 64%</br>Other - 10%</h3>
+				<h2 class = 'subOne'>Percentage of Gender Breakdown</h2>
+				<h3 class = 'subTwo'>Male - 23%</br>Female - 77%</h3>
+			</div>
+			<div id = "australia"><h1 class = 'display-5'>Australia</h1>
+				<h2 class = 'subOne'>Percentage of Children and Adults involved in trafficking</h2>
+				<h3 class = 'subTwo'>Children - 36%</br>Adults - 64%</h3>
+				<h2 class = 'subOne'>Percentage of Forms of Exploitations</h2>
+				<h3 class = 'subTwo'>Sexual Exploitation - 48%</br>Forced Labour - 47%</br>Other - 4%</h3>
+				<h2 class = 'subOne'>Percentage of Gender Breakdown</h2>
+				<h3 class = 'subTwo'>Male - 23%</br>Female - 77%</h3>
+			</div>
+      <br>
+      <div class = "lead" id="additionalStat">
+        <span class="display-5">
+          Additonal Statistics
+        </span>
+        <ul>
+          <li>
+            Every year, 300000 American children are at-risk of being commercially sexually exploited every year and 100,000 children are currently commercially sexually exploited.
+          </li>
+          <li>
+            1.2 million children are trafficked every year world wide and may be as young as 12 years old when they are trafficked.
+          </li>
+          <li>
+            Throughout the world, profits earned from the use of forced labour are estimated to be $150 billion per year with $99 billion from commercial sexual exploitation.
+          </li>
+          <li>
+            45% of commercially sexually exploited children in New York City were exploited in hotels with one study finding almost 4000 children who were sexually exploited with half of them being boys.
+          </li>
+          <li>
+            Over the last 15 years, there were more than 1.9 million reports involving suspected child abuse imagery made to the National Center on Missing and Exploited Children.
+          </li>
+        </ul>
+        <img class = 'img-fluid rounded' src = 'assets/img/demographics piechart.png'/>
+        <h6 class = 'UN'>Source: UN</h6>
+      </div>
+			<button class="btn btn-outline-success my-2 my-sm-0" id = "previous" onclick = "back()">Back</button>
+    </div>
+    <hr>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <p class="lead text-justify text-muted" id="dev">Designed by: Debugger Enterprises</p>
+          </div>
+          <div class="col-md">
+            <a href="https://www.ecpatusa.org/">
+              <p class="lead text-justify text-muted">Ecpat-USA</p>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="https://www.facebook.com/ECPATUSA/">
+              <p class="lead text-justify text-muted"><img class="img-fluid rounded" src="assets/img/brands/FB-f-Logo__blue_29.png">Ecpat-USA Facebook</p>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="https://twitter.com/ecpatusa">
+              <p class="lead text-justify text-muted"><img class="img-fluid rounded" src="assets/img/brands/Twitter_Logo_White_On_Blue_29.png">Ecpat-USA Twitter</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script src="disableEnter.js"></script>
+    <script src="statistics.js"></script>
+
+  </body>
+</html>

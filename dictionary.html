@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="shortcut icon" href="assets/img/icon.ico">
+    <script src="search.js"></script>
+    <title>
+      Stop
+    </title>
+  </head>
+  <body>
+    <header class="navbar navbar-inverse navbar-toggleable-md bg-faded sticky-top noselect" id="nav-bg">
+      <nav class="container">
+        <div class="d-flex justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" width="30" height="30" alt="">
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-between" id="mainNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link active" href="dictionary.html">Dictionary</a>
+            <a class="nav-item nav-link" href="quiz.html">Choices Quiz</a>
+            <div class="nav-item dropdown" id="dropdownID">
+              <a class="nav-link dropdown-toggle"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Information
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="statistics.html">Statistics</a>
+                <a class="dropdown-item" href="myth.html">Myth vs Reality</a>
+                <a class="dropdown-item" href="vulnerabilities.html">Vulnerabilities</a>
+              </div>
+            </div>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
+          </div>
+          <form class="form-inline" id="search" method="post">
+            <input class="form-control mr-sm-2" type="text" onkeyup="search(this.value)" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="resultTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultTitle">Results</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="searchDisplay">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "container">
+			<?php
+        <!-- Insert DB Credentials Here -->
+        $conn = new PDO("mysql:host=$servername;dbname=$databasename", $username, $password);
+				$cmd = "SELECT * FROM Definitions";
+				$statement = $conn->prepare($cmd);
+				$statement->execute();
+				$rowCount = $statement->rowCount();
+				echo
+				"<table class='table table-hover table-responsive table-inverse'>".
+          "<thead>".
+    				"<tr class='display-5'>".
+      				"<th class='db-row-main'>"."Term: " ."</th>".
+      				"<th class='db-row-main'>"."Definition: " ."</th>". "<br/>".
+    				"</tr>".
+          "</thead>".
+          "<tbody>";
+          for($i = 0; $i < $rowCount; $i++)
+          {
+            $resultEverything = $statement->fetch(PDO::FETCH_ASSOC);
+            echo
+              "<tr>".
+                "<th class = 'lead' width='35%'>". $resultEverything["Term"]."</th>".
+                "<td class = 'lead'>". $resultEverything["Definition"]."</td>".
+              "</tr>";
+          }
+          echo
+          "</tbody>".
+				"</table>";
+        $conn = null;
+			?>
+		</div>
+    <hr>
+    "</table>";
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <p class="lead text-justify text-muted" id="dev">Designed by: Debugger Enterprises</p>
+          </div>
+          <div class="col-md">
+            <a href="https://www.ecpatusa.org/">
+              <p class="lead text-justify text-muted">Ecpat-USA</p>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="https://www.facebook.com/ECPATUSA/">
+              <p class="lead text-justify text-muted"><img class="img-fluid rounded" src="assets/img/brands/FB-f-Logo__blue_29.png">Ecpat-USA Facebook</p>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="https://twitter.com/ecpatusa">
+              <p class="lead text-justify text-muted"><img class="img-fluid rounded" src="assets/img/brands/Twitter_Logo_White_On_Blue_29.png">Ecpat-USA Twitter</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="disableEnter.js"></script>
+  </body>
+</html>

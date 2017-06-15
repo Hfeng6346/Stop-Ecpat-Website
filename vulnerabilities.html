@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="shortcut icon" href="assets/img/icon.ico">
+    <script src="search.js"></script>
+    <title>
+      Stop
+    </title>
+  </head>
+  <body>
+    <header class="navbar navbar-inverse navbar-toggleable-md bg-faded sticky-top noselect" id="nav-bg">
+      <nav class="container">
+        <div class="d-flex justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" width="30" height="30" alt="">
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-between" id="mainNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="dictionary.html">Dictionary</a>
+            <a class="nav-item nav-link" href="quiz.html">Choices Quiz</a>
+            <div class="nav-item dropdown" id="dropdownID">
+              <a class="nav-link dropdown-toggle active"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Information
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="statistics.html">Statistics</a>
+                <a class="dropdown-item" href="myth.html">Myth vs Reality</a>
+                <a class="dropdown-item active" href="vulnerabilities.html">Vulnerabilities</a>
+              </div>
+            </div>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
+          </div>
+          <form class="form-inline" id="search" method="post">
+            <input class="form-control mr-sm-2" type="text" onkeyup="search(this.value)" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="resultTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resultTitle">Results</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="searchDisplay">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "container lead bg-faded rounded-bottom pb-2 pt-3">
+      <div class="display-5 text-warning">Vulnerabilities:</div>
+      <p>While anyone can be targeted by a trafficker, these factors can increase your odds of being targeted by sex traffickers. In the U.S girls usually enter the sex trafficking industry at around 12 - 14 years old, while boys usually enter the industry at around 11 - 13 years old.</p>
+      <ul class = 'text-danger'>
+        <li>
+          The absence of a parent or guardian or the lack of attention from one.
+        </li>
+        <li>
+          Been a target of bullying, or frequent contact with bullies.
+        </li>
+        <li>
+          Been in a foster home, or is homeless.
+        </li>
+        <li>
+          Runaways or those who have experienced the juvenile justice system.
+        </li>
+      </ul>
+      <br/>
+      <div class="text-warning">Warning Signs:</div>
+      <ul>
+        <li>
+          <span class="text-danger">
+            Signs of physical abuse:
+          </span>
+          <ul>
+            <li>Unexplained bruises</li>
+            <li>Black eyes</li>
+            <li>Cuts</li>
+            <li>Marks</li>
+          </ul>
+        </li>
+        <li>
+          <span class="text-danger">
+            Behavioral signs:
+          </span>
+          <ul>
+            <li>Fear</li>
+            <li>Anxiety</li>
+            <li>Depression</li>
+            <li>Paranoia</li>
+            <li>Secrecy</li>
+          </ul>
+        </li>
+        <li>
+          <span class="text-danger">
+            Change in physical appearance/style.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Newly acquired presence of branding or tattoos.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Unexplained absences from school and unexplained disappearances.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Sharp increase in calls/repeated phone calls from an adult boyfriend (some traffickers "allow" their victims to also attend school).
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Scripted communication.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Is under 18 and providing commercial sex acts.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Is in the commercial sex industry and has a manager.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Works excessively long or unusual hours.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Exhibits fearful or anxious behavior after bringing up law enforcement.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Avoids eye contact.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Appears malnourished.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Exhibits lack of control over self.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Have few or no personal possessions.
+          </span>
+        </li>
+        <li>
+          <span class="text-danger">
+            Is not allowed to able to speak for themselves.
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <p class="lead text-justify text-muted" id="dev">Designed by: Debugger Enterprises</p>
+          </div>
+          <div class="col-md">
+            <a href="https://www.ecpatusa.org/">
+              <p class="lead text-justify text-muted">Ecpat-USA</p>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="https://www.facebook.com/ECPATUSA/">
+              <p class="lead text-justify text-muted"><img class="img-fluid rounded" src="assets/img/brands/FB-f-Logo__blue_29.png">Ecpat-USA Facebook</p>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="https://twitter.com/ecpatusa">
+              <p class="lead text-justify text-muted"><img class="img-fluid rounded" src="assets/img/brands/Twitter_Logo_White_On_Blue_29.png">Ecpat-USA Twitter</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="disableEnter.js"></script>
+  </body>
+</html>

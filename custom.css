@@ -1,0 +1,64 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1050;
+    overflow-x: hidden;
+}
+body{
+  background-color: #400000;
+}
+#nav-bg{
+  background-color: #282c34;
+}
+#dropdownID{
+  cursor: pointer;
+}
+.noselect{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.jumbo-bg{
+  background-color: #626C7F;
+}
+hr{
+  border-color: #d6d6d6;
+}
+#dev{
+  cursor: default;
+}
+.display-5{
+  font-size: 2.5rem;
+  font-weight: 250;
+  line-height: 1.1;
+}
+.def{
+  list-style: none;
+}
+#namerica, #samerica, #asia, #australia, #africa, #europe, #previous
+{
+	display: none;
+}
+.subOne
+{
+	font-family: 'Ubuntu', sans-serif;
+	color: #FFF5C3;
+}
+.subTwo
+{
+	font-family: 'Ubuntu', sans-serif;
+	color: #9D84AA;
+}
+#additionalStat, .imgDiv{
+  text-align: center;
+}
+textarea{
+  resize: none;
+}
